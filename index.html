@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无尽勇士</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        button { margin: 5px; padding: 10px; font-size: 16px; }
+        .stats { margin-top: 20px; }
+        #rolePanel, #backpack { display: none; margin-top: 20px; border: 1px solid #000; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>无尽勇士</h1>
+    <div id="combatPanel">
+        <p>当前敌人生命值: <span id="enemyHealth">50</span></p>
+        <p>玩家生命值: <span id="health">150/150</span></p>
+        <p>金币: <span id="gold">0</span></p>
+        <p>经验值: <span id="experience">0</span></p>
+        <p>等级: <span id="level">1</span></p>
+        <button onclick="attack()">攻击</button>
+        <button onclick="useSkill()">释放技能 (冷却中)</button>
+        <button onclick="openBackpack()">打开背包</button>
+        <button onclick="openRolePanel()">打开角色界面</button>
+    </div>
+    <div id="rolePanel"></div>
+    <div id="backpack"></div>
+    <script src="game.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无尽勇士</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        button { margin: 5px; padding: 10px; font-size: 16px; }
+        .stats { margin-top: 20px; }
+        #rolePanel, #backpack, #log { 
+            display: none; 
+            margin-top: 20px; 
+            border: 1px solid #000; 
+            padding: 10px; 
+            max-height: 200px; 
+            overflow-y: auto; 
+            text-align: left;
+        }
+        .log-message { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>无尽勇士</h1>
+    <div id="combatPanel">
+        <p>当前敌人生命值: <span id="enemyHealth">50</span></p>
+        <p>玩家生命值: <span id="health">150/150</span></p>
+        <p>金币: <span id="gold">0</span></p>
+        <p>经验值: <span id="experience">0</span></p>
+        <p>等级: <span id="level">1</span></p>
+        <button onclick="attack()">攻击</button>
+        <button onclick="useSkill()">释放技能 (冷却中)</button>
+        <button onclick="openBackpack()">打开背包</button>
+        <button onclick="openRolePanel()">角色界面</button>
+        <button onclick="toggleLog()">战斗日志</button>
+    </div>
+    <div id="rolePanel"></div>
+    <div id="backpack"></div>
+    <div id="log"></div>
+    <script src="game.js"></script>
+</body>
+</html>
